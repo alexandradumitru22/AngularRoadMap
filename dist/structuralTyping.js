@@ -1,42 +1,42 @@
 "use strict";
-console.log('hello');
-class Dog {
-    constructor() { }
+function throwError(errorMsg) {
+    throw new Error(errorMsg);
 }
-let pet;
-pet = new Dog();
-pet.name = 'GRIVEI';
-console.log(pet);
-let dog = {
-    name: "Lassie",
-    owner: "Rudd Weatherwax"
-};
-pet = dog;
-console.log(pet);
-function greet(pet) {
-    console.log("Hello, " + pet.name);
-}
-greet(dog);
-let myLocation = (city) => city;
-let myAdress = (city, street) => street + ' from ' + city;
-console.log(myLocation('Popesti'));
-console.log(myAdress('Popesti', 'Eclipsei'));
-myAdress = myLocation;
-let firstName = () => ({ firstName: "Alex" });
-let fullName = () => ({ firstName: "Alice", lastName: "Dumitru" });
-firstName = fullName;
-function invokeLater(args, callback) {
-    console.log(args);
-    console.log(callback);
-}
-invokeLater([1, 2], (x, y) => console.log(x + ", " + y));
-invokeLater([1, 2], (x, y) => console.log(x + ", " + y));
-let m = [0, 1, null];
-console.log(typeof m);
-let n;
-function printMyAge(id) {
-    console.log(`I'm: ` + id + ' years old.');
-}
-printMyAge(25);
-printMyAge("25");
+let varNever = throwError('err');
+let varAny;
+varAny = 1;
+varAny = 'any';
+varAny = null;
+varAny = true;
+varAny = [];
+varAny = {};
+let varNull = null;
+varNull = varNever;
+varNull = varAny;
+let varUndefined;
+varUndefined = varAny;
+varUndefined = varNever;
+function voidFunction() { console.log('void void'); }
+;
+let varVoid = voidFunction();
+console.log(varVoid);
+varVoid = varAny;
+varVoid = varUndefined;
+varVoid = varNever;
+let varObject;
+varObject = [];
+varObject = {};
+varObject = varAny;
+let varUnknown;
+varUnknown = 1;
+varUnknown = 'Unknown';
+varUnknown = null;
+varUnknown = false;
+varUnknown = [];
+varUnknown = {};
+varUnknown = varObject;
+varUnknown = varVoid;
+varUnknown = varUndefined;
+varUnknown = varNull;
+varUnknown = varNever;
 //# sourceMappingURL=structuralTyping.js.map
