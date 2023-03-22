@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/alexandradumitru22/AngularRoadMap/issues"
   },
-  "homepage": "https://github.com/alexandradumitru22/AngularRoadMap#readme"
+  "homepage": "https://github.com/alexandradumitru22/AngularRoadMap#readme",
+  "dependencies": {
+    "rxjs": "^7.8.0"
+  }
 }
